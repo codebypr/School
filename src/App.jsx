@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/School">
         <Navbar />
         <Routes>
           <Route path='School' element={<Home />} />
