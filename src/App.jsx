@@ -5,10 +5,10 @@ function App() {
 
   return (
     <>
-      <BrowserRouter basename="/School">
+      <BrowserRouter >
         <Navbar />
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='School' element={<Home />} />
           <Route path='academic' element={<Academic />} />
           <Route path='principle' element={<Principle />} />
           <Route path='curriculan' element={<Curriculum />} />
