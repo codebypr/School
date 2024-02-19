@@ -17,7 +17,7 @@ function Navbar() {
           <div className="collapse navbar-collapse " id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 p-0 ">
               <li className="nav-item rounded-3">
-                <NavLink className={`nav-link active ${color} `} aria-current="page" to={'/'} >Home</NavLink>
+                <NavLink className={`nav-link active ${color} `} aria-current="page" to={'School'} >Home</NavLink>
               </li>
               <li className="nav-item dropdown rounded-3">
                 <NavLink className={`nav-link dropdown-toggle ${color}`}> About Us </NavLink>
@@ -60,7 +60,7 @@ function Navbar() {
                 <NavLink className={`nav-link dropdown-toggle ${color}`}>Admin</NavLink>
                 <ul className="dropdown-menu ">
                   <li><NavLink className="dropdown-item" to={'login'}>Admin Login</NavLink></li>
-                  <li><NavLink className="dropdown-item" to={'admin'}>CBSC Result X</NavLink></li>
+                  <li><NavLink className="dropdown-item" to={'admin'}> Main Portal X</NavLink></li>
                   <li><NavLink className="dropdown-item" to={'#'}>CBSC Result XII</NavLink></li>
                   <li><NavLink className="dropdown-item" to={'#'}>Career</NavLink></li>
                   <li><NavLink className="dropdown-item" to={'#'}>YouTube Channel</NavLink></li>
