@@ -1,14 +1,14 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import { Navbar, Footer, Home, Academic, Principle, AdmissionProcedure, RegistrationProcedure, OnlinePayment, FeeStructure, Gallery, Sports, ContactUs, Login, Curriculum, MainPannel, ComputerLab, MusicLab, SmartClassRoom, Library } from "./components";
 
 function App() {
 
   return (
     <>
-      <BrowserRouter >
+      <HashRouter >
         <Navbar />
         <Routes>
-          <Route path='/School' element={<Home />} />
+          <Route path='/' element={<Home />} />
           <Route path='academic' element={<Academic />} />
           <Route path='principle' element={<Principle />} />
           <Route path='curriculan' element={<Curriculum />} />
@@ -27,7 +27,7 @@ function App() {
           <Route path='admin' element={<MainPannel />} />
         </Routes>
         <Footer/>
-      </BrowserRouter>
+      </HashRouter>
     </>
   )
 }
