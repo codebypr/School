@@ -26,7 +26,9 @@ const Home=()=> {
             
              
              <div className='responsive-bg container-fluid pt-5 mt-5 mb-5 '>
-                <h1 className='ps-5 text-danger' style={{textShadow:'3px 3px black'}}>72 Years of<br /> 
+
+                <h1 className='ps-5 text-danger' style={{textShadow:'3px 3px black'}}>52 Years of<br /> 
+
             <TypeAnimation sequence={[' Establishing Legacies',' ' ]} repeat={Infinity} speed={10} /></h1>   
                         <div className="container bg-primary text-white w-25 p-5 rounded-5 d-flex align-items-center justify-contend-center flex-column bg-opacity-75" >
                         <h2 style={{textShadow:'3px 3px black'}} >Registration Open 2024-25</h2>
