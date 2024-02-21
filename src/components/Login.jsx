@@ -1,6 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { account } from './AppWrite/Apprite';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 function Login() {
+  const [email,setEmail]=useState(null);
+  const [password,setPassword]=useState(null);
+  const [msg,setMsg]=useState();
+  const navigate=useNavigate();
+
+  const loginTeacher= async()=>{
+    setMsg('loding...')
+      await account.createEmailSession(email,password).then(()=>navigate('/admin')).catch(()=>
+        setMsg('Invalid Email or Password!')
+      )
+  }
   return (
     <>
 
@@ -17,7 +30,7 @@ function Login() {
                   <div className="col-md-6 col-lg-7 d-flex align-items-center">
                     <div className="card-body p-4 p-lg-5 text-black">
 
-                      <form>
+                      <form onSubmit={loginTeacher}>
 
                         <div className="d-flex align-items-center mb-3 pb-1">
                           
@@ -27,24 +40,31 @@ function Login() {
                         <h5 className="fw-normal mb-3 pb-3" style={{ letterSpacing: '1px' }}>Sign into your account</h5>
 
                         <div className="form-outline mb-4">
-                          <input type="email" id="form2Example17" className="form-control form-control-lg" />
-                          <label className="form-label" for="form2Example17">User name</label>
+                          <input type="email" id="form2Example17" className="form-control form-control-lg"
+                          value={email}
+                          onChange={(e)=>setEmail(e.target.value)}
+                          required
+                          />
+                          <label>Email</label>
                         </div>
 
                         <div className="form-outline mb-4">
-                          <input type="password" id="form2Example27" className="form-control form-control-lg" />
-                          <label className="form-label" for="form2Example27">Password</label>
+                          <input type="password" id="form2Example27" className="form-control orm-control-lg"
+                          value={password}
+                          onChange={(e)=>setPassword(e.target.value)}
+                          required
+                          />
+                          <label >Password</label>
                         </div>
 
-                        <div className="pt-1 mb-4">
-                        
-                          <a className="btn btn-success btn-lg btn-block" type="button" href='admin'>Login</a>
-                         
+                        <div className="pt-1 mb-4 d-flex justify-content-between">
+                        <button type="submit" className="btn btn-success btn-lg btn-block">Login here</button>
+                        <h5 className='text-danger'>{msg}</h5>
                         </div>
 
-                        <a className="small text-muted" href="#!">Forgot password?</a>
-                        <p className="mb-5 pb-lg-2" style={{ color: '#393f81' }}>Don't have an account? <a href="#!"
-                          style={{ color: '#393f81' }}>Register here</a></p>
+                        <NavLink className="small text-muted" href="#">Forgot password?</NavLink>
+                        <p className="mb-5 pb-lg-2" style={{ color: '#393f81' }}>Don't have an account? 
+                        <a href="#/reg" style={{ color: '#393f81' }}> Register here</a></p>
                         <a href="#!" className="small text-muted">Terms of use.</a>
                         <a href="#!" className="small text-muted">Privacy policy</a>
                       </form>

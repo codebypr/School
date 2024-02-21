@@ -11,13 +11,16 @@ function Navbar() {
       <nav className="navbar navbar-expand-lg fixed-top w-100 z-2 " >
         <div className="container ">
           <Link className={`navbar-brand ${color}`} style={{ fontFamily: 'sans-serif', textShadow: '2px 3px black' }}><b>GOVT.SR.SEC. SCHOOL</b></Link>
-          <button className={`navbar-toggler ${color}`} type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+          <button className={`navbar-toggler ${color} `} data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" >
             <span className="navbar-toggler-icon"></span>
           </button>
+         
+
           <div className="collapse navbar-collapse " id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 p-0 ">
               <li className="nav-item rounded-3">
-                <NavLink className={`nav-link active ${color} `} aria-current="page" to={'/'} >Home</NavLink>
+                <NavLink className={({isActive})=>`nav-link active ${isActive? "text-warning fw-bold" : color} `} aria-current="page" to={'/'} >Home</NavLink>
               </li>
               <li className="nav-item dropdown rounded-3">
                 <NavLink className={`nav-link dropdown-toggle ${color}`}> About Us </NavLink>
@@ -60,7 +63,7 @@ function Navbar() {
                 <NavLink className={`nav-link dropdown-toggle ${color}`}>Admin</NavLink>
                 <ul className="dropdown-menu ">
                   <li><NavLink className="dropdown-item" to={'login'}>Admin Login</NavLink></li>
-                  <li><NavLink className="dropdown-item" to={'admin'}> Main Portal</NavLink></li>
+                  <li><NavLink className="dropdown-item" to={'#'}> Main Portal</NavLink></li>
                   <li><NavLink className="dropdown-item" to={'#'}>CBSC Result XII</NavLink></li>
                   <li><NavLink className="dropdown-item" to={'#'}>Career</NavLink></li>
                   <li><NavLink className="dropdown-item" to={'#'}>YouTube Channel</NavLink></li>
