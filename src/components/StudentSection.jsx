@@ -4,24 +4,32 @@ import { IoMdPersonAdd } from "react-icons/io";
 function StudentSection() {
     const [viewBtn,setViewBtn]=useState(false)
     const [viewText,setViewText]=useState('view all')
+    const [stdInfo,setStdInfo]=useState({})
    
     const studentData = [{ id: '1', name: 'Ram', class: '12th', phone: '1234567890' },
-    { id: '1', name: 'Ram', class: '12th', phone: '1234567890' },
-    { id: '1', name: 'Ram', class: '12th', phone: '1234567890' },
-    { id: '1', name: 'Ram', class: '12th', phone: '1234567890' },
-    { id: '1', name: 'Ram', class: '12th', phone: '1234567890' },
-    { id: '1', name: 'Ram', class: '12th', phone: '1234567890' },
-    { id: '1', name: 'Ram', class: '12th', phone: '1234567890' },
-    { id: '1', name: 'Ram', class: '12th', phone: '1234567890' },
-    { id: '1', name: 'Ram', class: '12th', phone: '1234567890' },
-    { id: '1', name: 'Ram', class: '12th', phone: '1234567890' },
-    { id: '1', name: 'Ram', class: '12th', phone: '1234567890' },
+    { id: '2', name: 'Shyam', class: '12th', phone: '123453330' },
+    { id: '3', name: 'Anand', class: '2nd', phone: '8976564890' },
+    { id: '4', name: 'Ram', class: '10th', phone: '1234567890' },
+    { id: '5', name: 'Rani', class: '11th', phone: '1234567890' },
+    { id: '6', name: 'Shiva', class: '5th', phone: '1234567890' },
+    { id: '7', name: 'Ram', class: '12th', phone: '1234567890' },
+    { id: '8', name: 'Neha', class: '10th', phone: '1234567890' },
+    { id: '9', name: 'Radha', class: '12th', phone: '1234567890' },
+    { id: '10', name: 'Ram', class: '6th', phone: '1234567890' },
+    { id: '11', name: 'Ram', class: '12th', phone: '1234567890' },
     ]
    
     const toggel=()=>{
         setViewBtn(!viewBtn)
          viewText=='view all'? setViewText('Add student') :   setViewText('view all')              
                     }
+
+   const viewStdDetails=(id)=>{
+        let arr=studentData.filter((std)=>(std.id==id))
+        let realObj=arr[0];
+        setStdInfo(realObj)
+    }    
+                
     return (
         <>
 
@@ -37,20 +45,117 @@ function StudentSection() {
                 {
                     viewBtn===true && (
 
-                        <div className="table col">
-                        <table>
+                        
+                        <section class="h-100 h-custom gradient-custom-2">
+                        <div class="container py-5 h-100">
+                            <div class="row d-flex justify-content-center align-items-center h-100">
+                            <div class="col-12">
+                                <div class="card card-registration card-registration-2" style={{borderRadius:'15px'}}>
+                                <div class="card-body p-0">
+                                    <div class="row g-0">
+                                    <div class="col-lg-6 p-5">
+                  <h3 class="fw-normal mb-5" style={{color:'#4835d4'}}>General Infomation</h3>
+
+                                <table>
                             {
                                 studentData.map((student) => (
                                     <tr><td>{student.id}</td><td>
                                         <button className='stdNameBtn'>{student.name}</button>
                                     </td><td>{student.class}</td><td>{student.phone}</td>
-                                        <td><button className='stdViewBtn '><FaEye color='blue' /></button></td>
+                                        <td><button className='stdViewBtn '
+                                        onClick={()=>viewStdDetails(student.id)}
+                                        ><FaEye color='blue' /></button></td>
                                     </tr>
                                 ))
                             }
 
-                        </table>
+                                </table>
+                                </div>
+                                
+              <div class="col-lg-6 text-white" style={{backgroundColor:'#4835d4'}}>
+                <div class="p-5">
+                  <h3 class="fw-normal mb-5">Contact Details</h3>
+
+                  <div class="mb-3 ">
+                      <input type="text" id="form3Examplea2" class="form-control form-control-lg"
+                      value={stdInfo.name}
+                      />
+                      <label >Name of student</label>                   
+                  </div>
+                  <div class="mb-3 ">
+                      <input type="text" id="form3Examplea2" class="form-control form-control-lg" 
+                      value={'kuldeep'}
+                      />
+                      <label >Father name</label>                   
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-5 mb-4 pb-2">
+
+                      <div class="form-outline form-white">
+                        <input type="text" id="form3Examplea4" class="form-control form-control-lg" 
+                        value={stdInfo.class}
+                        />
+                        <label>Class</label>
+                      </div>
+
                     </div>
+                    <div class="col-md-7 mb-4 pb-2">
+
+                      <div class="form-outline form-white">
+                        <input type="text" id="form3Examplea5" class="form-control form-control-lg" />
+                        <label >Place</label>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="mb-4 pb-2">
+                    <div class="form-outline form-white">
+                      <input type="text" id="form3Examplea6" class="form-control form-control-lg" />
+                      <label >Country</label>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-5 mb-4 pb-2">
+
+                      <div class="form-outline form-white">
+                        <input type="text" id="form3Examplea7" class="form-control form-control-lg" />
+                        <label >Code +</label>
+                      </div>
+
+                    </div>
+                    <div class="col-md-7 mb-4 pb-2">
+
+                      <div class="form-outline form-white">
+                        <input type="text" id="form3Examplea8" class="form-control form-control-lg" 
+                        value={stdInfo.phone}
+                        />
+                        <label >Phone Number</label>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="form-check d-flex justify-content-start mb-4 pb-3">
+                    <input class="form-check-input me-3" type="checkbox" value="" id="form2Example3c" />
+                    <label >I do accept theTerms and Conditions. </label>
+                  </div>
+
+                  <button type="button" class="btn btn-light btn-lg"
+                    data-mdb-ripple-color="dark">Register</button>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+                   
 
                     )
                 }
@@ -75,7 +180,7 @@ function StudentSection() {
                                         </div>
                                         <div class="col-xl-6">
                                             <div class="card-body p-md-5 text-black">
-                                                <h3 class="mb-5 text-uppercase">Student registration </h3>
+                                                <h3 class="mb-5 text-uppercase">Add New Student </h3>
         
                                                 <div class="row">
                                                     <div class="col-md-6 mb-4">
