@@ -3,7 +3,7 @@ import principle from '../MyImages/principle.jpg'
 export default function Principle() {
   return (
     <>
-    <div className="container card mt-5 mb-5 pt-5 border border-0" >
+    <div className="container card mb-5 pt-5 border border-0" >
                 <div className="row g-0">
                     
                     <div className="col-lg-6">

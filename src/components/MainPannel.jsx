@@ -1,9 +1,14 @@
 import { useRef, useState } from "react";
 import TeacherForm from "./teacherForm";
-import './App.css'
+import '../Css/style.css'
 import logo from '../MyImages/logo.jpg'
 import user from '../MyImages/user.jpg'
-
+import { PiStudentBold ,PiExam} from "react-icons/pi";
+import { MdOutlineDashboard,MdCoPresent } from "react-icons/md"
+import { SiBookstack } from "react-icons/si"
+import { GiTeacher } from "react-icons/gi";
+import { RiLogoutCircleRLine } from "react-icons/ri";
+import StudentSection from "./StudentSection";
 const MainPannel= ()=> {
     let textColor='text-white';
     const [show,setShow]=useState('logo');
@@ -30,32 +35,32 @@ const MainPannel= ()=> {
 
     return (
         <>
-        <div className="container-fluid d-flex p-0 " style={{height:'100vh',marginTop:'56px'}}>
-            <div className="container d-flex flex-column justify-content-start p-0" style={{width:'35vmin',backgroundColor:'#0275d8',border:'2px solid black'}}>
+        <div className="container-fluid d-flex  p-0" style={{height:'100vh',backgroundColor:'#fff'}}>
+            <div className="adminbtn container d-flex flex-column justify-content-start p-3 m-3 rounded" style={{width:'35vmin',backgroundColor:'#171533'}}>
 
                 <div className={`text-center my-1 ${textColor}`}>
-                   
                     <img onClick={connectRef} src={img} style={{width:'15vmin',height:'15vmin',objectFit:'cover',border:'2px solid #fff',borderRadius:'50%',cursor:'pointer'    }}/>
                     <input type="file" ref={imgRef} onChange={showImg} className="d-none"/>
                     <p>Teacher name</p>
-                  
                 </div>
+                    
 
-            <button type="button" className={`w-100 mt-2 btn border border-black border-end-0 border-start-0 ${textColor}`} style={{backgroundColor:'#0275d8'}} onClick={()=>location.reload()}>Dashboard <i class="fa fa-refresh fa-spin text-warning" ></i></button>
-            <button type="button" className={`w-100 mt-2 btn border border-black border-end-0 border-start-0 ${textColor}`} style={{backgroundColor:'#0275d8'}} onClick={()=>setShow('teacher')}>Add Teacher</button>
-            <button type="button" className={`w-100 mt-2 btn border border-black border-end-0 border-start-0 ${textColor}`} style={{backgroundColor:'#0275d8'}} onClick={()=>setShow('student')}>Add Student</button>
-            <button type="button" className={`w-100 mt-2 btn border border-black border-end-0 border-start-0 ${textColor}`} style={{backgroundColor:'#0275d8'}} onClick={()=>setShow('corse')}>Course</button>
-            <button type="button" className={`w-100 mt-2 btn border border-black border-end-0 border-start-0 ${textColor}`} style={{backgroundColor:'#0275d8'}} onClick={()=>setShow('attendence')}>Attendence</button>
-            <a type="button" className={`w-100 mt-2 btn border border-black border-end-0 border-start-0 ${textColor}`} style={{backgroundColor:'#0275d8'}}  href="https://www.drmgronline.in/assets/MBA%20REGNO%202022%20BATCH_jan_2022.pdf" target="_blank">Exame section</a>
+            <button type="button"  onClick={()=>location.reload()}><MdOutlineDashboard size={20} className="me-2"/>Dashboard </button>
+            <button type="button" onClick={()=>setShow('teacher')}><GiTeacher size={20} className="me-2"/>Teacher</button>
+            <button type="button" onClick={()=>setShow('student')}><PiStudentBold size={20} className="me-2"/>Student</button>
+            <button type="button"  onClick={()=>setShow('attendence')}><MdCoPresent size={20} className="me-2"/>Attendence</button>
+            <button type="button" onClick={()=>setShow('corse')}><SiBookstack size={20} className="me-2"/>Course</button>
+            <button type="button"  ><PiExam size={20} className="me-2"/>Exame </button>
+            <button type="button" className="mt-auto" ><RiLogoutCircleRLine size={20} className="me-2"/>Logout </button>
             </div>
 
            
-            <div className="container-fluid p-0 " 
-            style={{backgroundColor:'#fff',border:'2px solid black',overflow:'auto'}} >              
+            <div className="container-fluid p-0 m-3 shadow-lg " 
+            style={{backgroundColor:'#fff',overflow:'auto'}} >              
                <div className="container py-5 b">
                     { show =='logo' && (<div className=" container text-center"><img src={logo} width={'45%'}/></div>)}
                     {show=='teacher' && (<TeacherForm/>)}
-                    {show=='student' && (<TeacherForm/>)}
+                    {show=='student' && (<StudentSection/>)}
                     {show=='attendence' && (
                     <table >
                         <th >Name</th>

@@ -1,7 +1,7 @@
 import computerLab from '../MyImages/computerLab.jpg';
 import computerLab2 from '../MyImages/computerLab2.jpg';
 import library from '../MyImages/school_student.jpg';
-import './App.css'
+import '../Css/style.css'
 function Library(){
     return(
         <>
@@ -11,14 +11,14 @@ function Library(){
                 <p>The reference library, which is fully computerized and houses a huge collection of books, is a treasure trove of information that has been built assiduously over years and continues to grow each year</p>
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-6 my-2">
-                            <img src={library} alt="" width={'100%'} />
+                        <div className="col-md-4 my-2">
+                            <img src={library} alt="" width={'100%'} height={'200'} />
                         </div>
-                        <div className="col-md-6 my-2">
-                            <img src={computerLab} alt="" width={'100%'} />
+                        <div className="col-md-4 my-2">
+                            <img src={computerLab} alt="" width={'100%'} height={'200'}/>
                         </div>
-                        <div className="col-md-6 my-2">
-                            <img src={computerLab2} alt="" width={'100%'} />
+                        <div className="col-md-4 my-2">
+                            <img src={computerLab2} alt="" width={'100%'} height={'200'}/>
                         </div>
                     </div>
                 </div>

@@ -6,8 +6,8 @@ import art from '../MyImages/Art.jpg';
 export default function Academic() {
     return (
         <>
-        <div className="container text-center m-5 pt-5">
-            <h1>Academic Support <br /><u>Programs</u></h1>
+        <div className="container text-center pt-2">
+            <h1 className='mb-5'>Academic Support </h1>
         </div>
             <div className="container card mb-3 mt-3 border border-0" >
                 <div className="row g-0">
@@ -16,7 +16,7 @@ export default function Academic() {
                         <div className="card-body">
                             <h3 className="card-title">Thriving all round development of a child through co-curricular activities</h3>
                             <p className="card-text">Merely having knowledge about a few academic concepts doesn’t enrich one’s personality. A person must need `think beyond academics. Striking a right balance between curriculum, syllabus, books and co-curricular activities is must. Co-curricular activities give a unique experience, i.e. outside the typical pen and pencil classroom experience. These activities allow kids to develop particular skills and exhibit their non – academic abilities.</p>
-                            <button type="button" class="btn btn-light bg-warning d-flex align-items-center"><h1> &#8594;</h1>  SEND AN INQUIRY TODAY</button>
+                            
                         </div>
                     </div>
                     <div className="col-lg-6">
@@ -45,7 +45,7 @@ export default function Academic() {
                         <div className="card-body">
                             <h3 className="card-title">Technology</h3>
                             <p className="card-text">Technology has the ability to enhance relationships between teachers and students. When teachers effectively integrate technology into subject areas, teachers grow into roles of adviser, content expert, and coach. Technology helps make teaching and learning more meaningful and fun. Lotus Veda being one of the best preschool in Ashok Vihar provides its children with the opportunity to use and interact with this technology at different levels.</p>
-                            <button type="button" class="btn btn-light bg-warning d-flex align-items-center"><h1> &#8594;</h1>  SEND AN INQUIRY TODAY</button>
+                  
                         </div>
                     </div>
                     <div className="col-lg-6">

@@ -1,6 +1,6 @@
 import computerLab from '../MyImages/computerLab.jpg';
 import computerLab2 from '../MyImages/computerLab2.jpg';
-import './App.css'
+import '../Css/style.css'
 function ComputerLab(){
     return(
         <>

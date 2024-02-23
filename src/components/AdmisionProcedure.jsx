@@ -18,7 +18,7 @@ function AdmisionProcedure() {
                 
                 <p>Limited vacancies may exist in the middle of the academic year. Information on mid-year vacancies may be obtained by emailing the school admission office. However, it is desirable that all admission formalities are completed well before the end of March</p>
             </div>
-            <div className="container bg-success p-5 mt-5">
+            <div className="container bg-success p-5 mt-5 text-white">
                 <h1>Documents Required</h1>
                 <p>Once the admission is confirmed you have to pay the applicable fees along with the below-mentioned documents:</p>
                 <ul>

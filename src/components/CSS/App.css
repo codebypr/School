@@ -22,9 +22,9 @@ nav,.dropdown ul {
     animation-timing-function: step-start;
   }
   @keyframes animate {
-    30%{background-image: url(../MyImages/slide2.jpg);}
-    60%{ background-image: url(../MyImages/school_student.jpg);}
-    100%{ background-image: url(../MyImages/slide4.jpg);  } 
+    30%{background-image: url(.../MyImages/slide2);}
+    60%{ background-image: url(.../MyImages/school_student.jpg);}
+    100%{ background-image: url(.../MyImages/slide4.jpg);  } 
   }
 table,tr,th,td{
   text-align: center;

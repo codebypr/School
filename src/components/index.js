@@ -1,4 +1,4 @@
-import Navbar from "./Navbar";
+import Navbar from "./Header/Navbar";
 import Home from "./Home";
 import Academic from "./Academic";
 import Principle from "./Principle";
@@ -17,7 +17,7 @@ import ComputerLab from "./ComputerLab";
 import MusicLab from "./MusicLab";
 import SmartClassRoom from "./SmartClassRoom";
 import Library from "./Library";
-import Registration from "./Registration";
 
 
-export{Navbar,Home,Academic,Principle,AdmissionProcedure,RegistrationProcedure,OnlinePayment,FeeStructure,Gallery,Sports,ContactUs,Login,Curriculum,MainPannel,Footer,ComputerLab,MusicLab,SmartClassRoom,Library,Registration}
+
+export{Navbar,Home,Academic,Principle,AdmissionProcedure,RegistrationProcedure,OnlinePayment,FeeStructure,Gallery,Sports,ContactUs,Login,Curriculum,MainPannel,Footer,ComputerLab,MusicLab,SmartClassRoom,Library}

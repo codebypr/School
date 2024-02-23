@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { account } from './AppWrite/Apprite';
 import { NavLink, useNavigate } from 'react-router-dom';
 
 function Login() {
@@ -10,14 +9,12 @@ function Login() {
 
   const loginTeacher= async()=>{
     setMsg('loding...')
-      await account.createEmailSession(email,password).then(()=>navigate('/admin')).catch(()=>
-        setMsg('Invalid Email or Password!')
-      )
+      navigate('/admin')
   }
   return (
     <>
 
-      <section className="container-fluid mt-5 py-3" style={{ backgroundColor: '#9A616D' }}>
+      <section className="container-fluid  py-5" style={{ backgroundColor: '#9A616D' }}>
         <div className="container">
           <div className="row d-flex justify-content-center align-items-center " >
             <div className="col col-xl-10" >
@@ -43,7 +40,7 @@ function Login() {
                           <input type="email" id="form2Example17" className="form-control form-control-lg"
                           value={email}
                           onChange={(e)=>setEmail(e.target.value)}
-                          required
+                         
                           />
                           <label>Email</label>
                         </div>
@@ -52,7 +49,7 @@ function Login() {
                           <input type="password" id="form2Example27" className="form-control orm-control-lg"
                           value={password}
                           onChange={(e)=>setPassword(e.target.value)}
-                          required
+                         
                           />
                           <label >Password</label>
                         </div>

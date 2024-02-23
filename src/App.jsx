@@ -1,12 +1,14 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
-import { Navbar, Footer, Home, Academic, Principle, AdmissionProcedure, RegistrationProcedure, OnlinePayment, FeeStructure, Gallery, Sports, ContactUs, Login, Curriculum, MainPannel, ComputerLab, MusicLab, SmartClassRoom, Library, Registration } from "./components";
+import { Navbar, Footer, Home, Academic, Principle, AdmissionProcedure, RegistrationProcedure, OnlinePayment, FeeStructure, Gallery, Sports, ContactUs, Login, Curriculum, MainPannel, ComputerLab, MusicLab, SmartClassRoom, Library } from "./components";
+import Header from "./components/Header/Header";
 
 function App() {
 
   return (
     <>
       <HashRouter >
-        <Navbar />
+        <Header/>
+        <Navbar/>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='academic' element={<Academic />} />
@@ -24,10 +26,10 @@ function App() {
           <Route path='sports' element={<Sports />} />
           <Route path='contact' element={<ContactUs />} />
           <Route path='login' element={<Login />} />
-          <Route path='reg' element={<Registration/>} />
           <Route path='admin' element={<MainPannel />} />
         </Routes>
-        <Footer/>
+        {/* <Footer/> */}
+      
       </HashRouter>
     </>
   )

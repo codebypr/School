@@ -6,7 +6,7 @@ function ContactUs() {
     <>
         <div className="container mt-5 mb-5 pt-5">
             <div className="row">
-                <div className="col-lg-5">
+                <div className="col-lg-6">
                     <div className="container bg-danger p-5  text-white">
                         <h1>Our Address</h1>
                         <hr />
@@ -18,7 +18,7 @@ function ContactUs() {
                         <h6>Office No. 745, 7th floor, JMD Megapolis, Sector 48, Gurugram – 122018 (Haryana)</h6>
                     </div>
                 </div>
-                <div className="col-lg-5">
+                <div className="col-lg-6">
                 <div className="container bg-success p-5  text-white">
                         <h1>Our Email</h1>
                         <hr />
