@@ -1,4 +1,4 @@
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import '../../Css/style.css';
 import { FcMenu } from "react-icons/fc";
 
@@ -59,7 +59,7 @@ function Navbar() {
                 <NavLink className={`nav-link dropdown-toggle ${color}`}>Admin</NavLink>
                 <ul className="dropdown-menu ">
                   <li><NavLink className="dropdown-item" to={'login'}>Admin Login</NavLink></li>
-                  <li><NavLink className="dropdown-item" to={'admin'}> Main Portal</NavLink></li>
+                  <li><NavLink className="dropdown-item" to={'#'}> Main Portal</NavLink></li>
                 </ul>
               </li>
 

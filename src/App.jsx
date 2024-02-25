@@ -1,13 +1,17 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
 import { Navbar, Footer, Home, Academic, Principle, AdmissionProcedure, RegistrationProcedure, OnlinePayment, FeeStructure, Gallery, Sports, ContactUs, Login, Curriculum, MainPannel, ComputerLab, MusicLab, SmartClassRoom, Library } from "./components";
 import Header from "./components/Header/Header";
+import ShowAndHideComponent from "./components/Header/ShowAndHideComponent";
 
-function App() {
+function App(props) {
+ 
 
   return (
     <>
       <HashRouter >
+      <ShowAndHideComponent>
         <Header/>
+        </ShowAndHideComponent> 
         <Navbar/>
         <Routes>
           <Route path='/' element={<Home />} />
@@ -28,7 +32,9 @@ function App() {
           <Route path='login' element={<Login />} />
           <Route path='admin' element={<MainPannel />} />
         </Routes>
-        {/* <Footer/> */}
+       <ShowAndHideComponent>
+         <Footer/>
+       </ShowAndHideComponent>
       
       </HashRouter>
     </>

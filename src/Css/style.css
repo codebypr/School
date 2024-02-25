@@ -38,14 +38,19 @@ nav,.dropdown ul {
       60%{ background-image: url(../MyImages/school_student.jpg);}
       100%{ background-image: url(../MyImages/slide4.jpg);  } 
     }
-  table,tr,th,td{
-    text-align: center;
-    border: 2px solid black;
-  }
-  td{
-    width: 100px;
+ 
+  .stdtr td{
+    width: 400px;
   }
   
+  .AttTable,th,.AttRow,.AttCol{
+    border: 1px solid black;
+    text-align: center;
+  }
+  .AttRow .AttCol{
+    width: 300px;
+    white-space: nowrap;
+  }
   .adminbtn button{
     padding: 10px 0px 10px 10px;
     border-radius: 10px;

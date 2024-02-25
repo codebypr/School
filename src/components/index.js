@@ -11,7 +11,7 @@ import Sports from "./Sports";
 import ContactUs from "./ContactUs";
 import Login from "./Login";
 import Curriculum from "./Curriculum";
-import MainPannel from "./MainPannel";
+import MainPannel from "./AdminPannel/MainPannel";
 import Footer from "./Footer";
 import ComputerLab from "./ComputerLab";
 import MusicLab from "./MusicLab";
